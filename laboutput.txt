@@ -1,0 +1,109 @@
+lab7a1.py
+smucadaon@ops445VM:~/ops445/lab7$ python3 lab7a1.py
+08:00:00 + 00:50:00 --> 08:50:00
+08:55:00 + 00:50:00 --> 09:45:00
+09:50:00 + 00:50:00 --> 10:40:00
+
+lab7b.py
+smucadaon@ops445VM:~/ops445/lab7$ python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from lab7b import *
+>>> time1 = Time(9,50,0)
+>>> format_time(time1)
+'09:50:00'
+>>> seconds = 1800
+>>> change_time(time1, seconds)
+>>> format_time(time1)
+'10:20:00'
+>>> seconds = -1800
+>>> change_time(time1, seconds)
+>>> format_time(time1)
+'09:50:00'
+>>> 
+
+lab7c.py
+smucadaon@ops445VM:~/ops445/lab7$ python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from lab7c import *
+>>> t1 = Time(9,50,0)
+>>> sec_t1 = time_to_sec(t1)
+>>> sec_t1
+35400
+>>> t1_sec = sec_to_time(sec_t1)
+>>> t1_sec
+<lab7c.Time object at 0x7d6c88534110>
+>>> format_time(t1_sec)
+'09:50:00'
+>>> 
+
+lab7c1.py
+smucadaon@ops445VM:~/ops445/lab7$ python3 lab7c1.py
+08:00:00 + 00:50:00 --> 08:50:00
+08:55:00 + 00:50:00 --> 09:45:00
+09:50:00 + 1800 sec --> 10:20:00
+
+lab7d.py
+smucadaon@ops445VM:~/ops445/lab7$ python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from lab7d import *
+>>> t1 = Time(9,50,0)
+>>> t1
+<lab7d.Time object at 0x7164d0d4e750>
+>>> print(t1)
+<lab7d.Time object at 0x7164d0d4e750>
+>>> format_time(t1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'format_time' is not defined
+>>> Time.format_time(t1)
+'09:50:00'
+>>> type(Time.format_time)
+<class 'function'>
+>>> t1.format_time()
+'09:50:00'
+>>> type(t1.format_time)
+<class 'method'>
+>>> 
+
+lab7e.py
+smucadaon@ops445VM:~/ops445/lab7$ python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from lab7e import *
+>>> t1 = Time(9,50,0)
+>>> t1
+09.50.00
+>>> print(t1)
+09:50:00
+>>> 
+
+lab7f.py
+smucadaon@ops445VM:~/ops445/lab7$ python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from lab7f import *
+>>> t1 = Time(9,50,0)
+>>> t2 = Time(1,1,1)
+>>> t1.sum_times(t2)
+10.51.01
+>>> t2.sum_times(t1)
+10.51.01
+>>> t1 + t2
+10.51.01
+>>> x = t1 + t2
+>>> type(x)
+<class 'lab7f.Time'>
+>>> print(x)
+10:51:01
+>>> 
+
+lab7i.py
+smucadaon@ops445VM:~/ops445/lab7$ python3 lab7i.py
+print() in main on schoolName: Seneca
+print() in function1 on schoolName: SICT
+print() in main on schoolName: SICT
+print() in function2 on schoolName: SSDO
+print() in main on schoolName: SSDO
